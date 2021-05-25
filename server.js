@@ -24,6 +24,8 @@ var server = http.createServer(function(request, response) {
   console.log("有个傻子发请求过来啦！路径（带查询参数）为：" + pathWithQuery);
 
   response.statusCode = 200
+  //console.log(pathWithQuery)    //带参数路径
+  //console.log(path)             //不带参数路径
   //默认首页，如果路径为/则重定向到/index.html
   const filePath = path === '/' ? '/index.html' : path
   const index = filePath.lastIndexOf('.')
